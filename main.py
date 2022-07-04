@@ -22,9 +22,13 @@ for line in lineasDetectadas:
    b=np.sin(theta)
    x0=a*rho
    y0=b*rho
+   'x1 guarda el valor redondeado de r*cos(theta)-1000* sin(theta)'
    x1 = int(x0+1000*(-b))
+   'y1 guarda el valor redondeado de r*sin(theta)-1000* cos(theta)'
    y1 = int(y0+1000*(a))
+   'x2 guarda el valor redondeado de r*cos(theta)-1000* sin(theta)'
    x2 = int(x0-1000*(-b))
+   'y2 guarda el valor redondeado de r*sin(theta)-1000* cos(theta)'
    y2 = int(y0-1000*(a))
    cv2.line(imagen,(x1,y1),(x2,y2),(255,0,255),2)
 
